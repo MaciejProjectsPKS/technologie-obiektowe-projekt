@@ -1,1 +1,32 @@
+1
 Maciej Janik
+maciek.janik24@gmail.com
+1ID21A
+
+
+2
+Temat: Konwersja pomiędzy formatami - konwersja między JSON a XML.
+
+
+3
+Spis technologii:
+Java 
+Framework Spring
+Lombok
+JUnit
+
+
+4
+Lista funkcjonalności:
+- API do przeprowadzania konwersji
+- konwersja z JSON do XML
+- konwersja z XML do JSON 
+
+
+5
+Praca wykonywana samodzielnie 
+
+
+6
+Programowanie systemów rozproszonych: Nadzór rodzicielski.
+Temat pracy inżynierskiej: Internetowy portal wspomagający i integrujący pasjonatów motoryzacji.
