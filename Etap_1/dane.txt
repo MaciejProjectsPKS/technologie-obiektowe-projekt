@@ -10,17 +10,19 @@ Temat: Konwersja pomiędzy formatami - konwersja między JSON a XML.
 
 3
 Spis technologii:
-Java 
-Framework Spring
-Lombok
-JUnit
+	Java + Spring
+-Spring Web
+-Spring Data MongoDB
+-Lombok
+-JUnit
 
 
 4
 Lista funkcjonalności:
-- API do przeprowadzania konwersji
 - konwersja z JSON do XML
 - konwersja z XML do JSON 
+- API do przeprowadzania konwersji
+- Zapis w bazie danych przeprowadzanych konwersji
 
 
 5
