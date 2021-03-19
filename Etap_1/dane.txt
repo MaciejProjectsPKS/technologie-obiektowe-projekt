@@ -21,6 +21,7 @@ Spis technologii:
 Lista funkcjonalności:
 - konwersja z JSON do XML
 - konwersja z XML do JSON 
+- przeprowadzanie konwersji z pliku i za pomocą API
 - API do przeprowadzania konwersji
 - Zapis w bazie danych przeprowadzanych konwersji
 
