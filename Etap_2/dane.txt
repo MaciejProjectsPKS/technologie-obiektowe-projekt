@@ -1,0 +1,5 @@
+utworzyłem projekt aplikacji
+dodałem obługę API aplikacji: dodano przykładowe endpointy do konwersji z pliku lub z przesłanego body
+zaimplementowałem klasy i obiekty do synchronizacji z bazą danych
+nowe pliki:8
+
