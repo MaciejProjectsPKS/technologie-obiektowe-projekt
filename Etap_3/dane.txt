@@ -1,0 +1,4 @@
+Analizowałem aktualnie instniejące Frameworki w celu porówniania rozwiązania i własnej implementacji
+
+
+
