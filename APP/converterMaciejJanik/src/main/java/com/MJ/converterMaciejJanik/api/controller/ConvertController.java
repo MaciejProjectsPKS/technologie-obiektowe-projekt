@@ -13,12 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class ConvertController {
 
     @Autowired
-    private ConvertAPIService convertAPIService;
-
-    @RequestMapping(path = "/hello", method = RequestMethod.GET, produces = "application/json")
-    public String test(){
-        return "Hello World";
-    }
+    private final ConvertAPIService convertAPIService;
 
     @RequestMapping(path = "/content/{sourceEXT}/to/{targetEXT}", method = RequestMethod.POST, produces = "application/json")
     public Object convert(@PathVariable Extension sourceEXT, @PathVariable Extension targetEXT,
