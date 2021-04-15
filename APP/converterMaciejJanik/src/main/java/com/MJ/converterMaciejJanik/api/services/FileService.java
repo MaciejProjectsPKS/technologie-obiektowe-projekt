@@ -1,11 +1,13 @@
 package com.MJ.converterMaciejJanik.api.services;
 
 import com.MJ.converterMaciejJanik.models.enums.Extension;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
 
 @Service
+@Slf4j
 public class FileService {
 
     public String readFile(String path){
@@ -29,7 +31,7 @@ public class FileService {
     }
 
     public Extension getSourceExtension(String path){
-        return Extension.JSON;
+        return Extension.fromString(path.substring(path.indexOf(".")+1).toLowerCase());
     }
 
 }
