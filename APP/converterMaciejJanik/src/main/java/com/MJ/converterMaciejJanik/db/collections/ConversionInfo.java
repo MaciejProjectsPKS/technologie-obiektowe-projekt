@@ -14,12 +14,13 @@ import java.util.Date;
 @NoArgsConstructor
 public class ConversionInfo {
 
-    public ConversionInfo(Date dateConversion, Extension sourceExt, Extension targetExt, String sourceContent, String targetContent) {
+    public ConversionInfo(Date dateConversion, Extension sourceExt, Extension targetExt, String sourceContent, String targetContent, String savedFilePath) {
         this.dateConversion = dateConversion;
         this.sourceExt = sourceExt;
         this.targetExt = targetExt;
         this.sourceContent = sourceContent;
         this.targetContent = targetContent;
+        this.savedFilePath = savedFilePath;
     }
 
     @Id
@@ -29,5 +30,6 @@ public class ConversionInfo {
     private Extension targetExt;
     private String sourceContent;
     private String targetContent;
+    private String savedFilePath;
 
 }
