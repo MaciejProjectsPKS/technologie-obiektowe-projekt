@@ -1,0 +1,27 @@
+
+Nowości:
+1. implementacja generowanie obiektu i zapisu danych konwersji do bazy
+2. nowa funkcjonalność -  możliwość pobrania historii konwersji z bazy za pomocą API z wyborem liczby ostatnich rekordów
+3. czytanie pliku wskazanego w parametrach w requescie konwersji
+4. dokończenie obsługi requestów konwersji - wykonywanie odpowiednich metod i zwracanie modelu konwersji
+5. zapisywanie konwersji do pliku, jeśli ścieżka została wskazana
+6. rozszerzenie stałych typów plików o logiki wyciągania typu z pliku oraz domyślna wartość dla nie obsługiwanych typów
+7. przygotowanie klas i modelów
+
+
+Dalej:
+1. rozszerzenie pobierania historii o wybór okresu daty, z którego ma zostać pobrana historia
+2. implementacja logik konwersji plików w zależności od wybranego typu
+3. przygotowanie klas, interfejsów generycznych do konwertowania danych
+4. zaplanowanie implementacji logik konwersji
+
+
+Kod źródłowy:
+
+Commits: 17
+zmienionych plików: 9
+zmienionych linii: 208 (+179, -29)
+
+
+Pull Request Etapu 4:
+https://github.com/MaciejProjectsPKS/technologie-obiektowe-projekt/pull/2
