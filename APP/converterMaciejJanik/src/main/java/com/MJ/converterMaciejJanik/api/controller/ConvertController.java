@@ -17,14 +17,14 @@ public class ConvertController {
 
     @RequestMapping(path = "/content/{sourceEXT}/to/{targetEXT}", method = RequestMethod.POST, produces = "application/json")
     public Object convert(@PathVariable Extension sourceEXT, @PathVariable Extension targetEXT,
-                          @RequestBody String content, @RequestParam(name="save") String fileSavePath){
+                          @RequestBody String content, @RequestParam(name="save", required = false) String fileSavePath){
 
         return convertAPIService.convertBodyContent(content, sourceEXT, targetEXT, fileSavePath);
     }
 
     @RequestMapping(path = "/file/to/{targetEXT}", method = RequestMethod.POST, produces = "application/json")
     public Object convertFromFile( @PathVariable Extension targetEXT, @RequestParam(name="path") String filePath,
-                                   @RequestParam(name="save") String fileSavePath){
+                                   @RequestParam(name="save", required = false) String fileSavePath){
 
         return convertAPIService.convertFileContent(filePath, targetEXT, fileSavePath);
     }
