@@ -20,4 +20,9 @@ public enum Extension {
         return Arrays.stream(Extension.values()).filter(s -> s.code.equalsIgnoreCase(value)).findFirst()
                 .orElse(Extension.INVALID);
     }
+
+    @Override
+    public String toString() {
+        return code;
+    }
 }
