@@ -18,9 +18,9 @@ Dalej:
 
 Kod źródłowy:
 
-Commits: 17
+Commits: 19
 zmienionych plików: 9
-zmienionych linii: 208 (+179, -29)
+zmienionych linii: 235 (+206, -29)
 
 
 Pull Request Etapu 4:
