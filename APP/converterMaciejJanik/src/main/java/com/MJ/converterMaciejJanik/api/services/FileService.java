@@ -36,8 +36,19 @@ public class FileService {
     }
 
 
-    public boolean writeToFile(String path){
-        return true;
+    public String writeToFile(String path, String convertedContent, Extension target){
+
+          BufferedWriter writer = null;
+          String targetPath=path+"/complete."+target.toString();
+        try {
+            writer = new BufferedWriter(new FileWriter(targetPath));
+            writer.write(convertedContent);
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return targetPath;
     }
 
     public Extension getSourceExtension(String path){
