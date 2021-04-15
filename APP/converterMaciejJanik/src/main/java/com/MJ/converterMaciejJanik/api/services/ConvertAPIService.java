@@ -13,6 +13,8 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.Objects;
 
+import static org.springframework.http.ResponseEntity.ok;
+
 @Service
 @Slf4j
 public class ConvertAPIService {
@@ -21,40 +23,41 @@ public class ConvertAPIService {
     private ConversionRepo conversionRepo;
 
     @Autowired
-    private MJConversionService MJConversionService;
+    private MJConversionService conversionService;
 
     @Autowired
     private FileService fileService;
 
 
     public Object convertBodyContent(String content, Extension sourceEXT, Extension targetEXT, String fileSavePath) {
-
-        String convertedContent =content;///TODO use method to convert
+        String targetFileSave= "";
+        String convertedContent =conversionService.convert(content);
 
         if(Objects.nonNull(fileSavePath)){
-            fileService.writeToFile(fileSavePath);
+            targetFileSave = fileService.writeToFile(fileSavePath,convertedContent, targetEXT);
         }
-        ConversionInfo currentConversion = new ConversionInfo(new Date(),sourceEXT,targetEXT,content,"todo-ready", fileSavePath );//TODO source ext
+        ConversionInfo currentConversion = new ConversionInfo(new Date(),sourceEXT,targetEXT,content,convertedContent, targetFileSave );
         conversionRepo.save(currentConversion);
-                return new ConversionComplete(convertedContent,sourceEXT,targetEXT,fileSavePath,Objects.nonNull(fileSavePath));
+     return ok(new ConversionComplete(convertedContent,sourceEXT,targetEXT,targetFileSave,Objects.nonNull(fileSavePath)));
     }
 
     public Object convertFileContent(String filePath, Extension targetEXT, String fileSavePath) {
-       String fileContent = fileService.readFile(filePath);
+        String targetFileSave= "";
+        String fileContent = fileService.readFile(filePath);
 
-       String convertedContent =fileService.readFile(filePath);///TODO use method to convert
+       String convertedContent = conversionService.convert(fileService.readFile(filePath));
 
         if(Objects.nonNull(fileSavePath)){
-            fileService.writeToFile(fileSavePath);
+            targetFileSave = fileService.writeToFile(fileSavePath, convertedContent, targetEXT);
         }
 
         ConversionInfo currentConversion =
                 new ConversionInfo(new Date(), fileService.getSourceExtension(filePath),
-                        targetEXT,fileContent, "todo-ready", fileSavePath);//TODO source content
+                        targetEXT,fileContent, convertedContent, targetFileSave);
 
         conversionRepo.save(currentConversion);
 
-        return new ConversionComplete(convertedContent,fileService.getSourceExtension(filePath),targetEXT,fileSavePath,Objects.nonNull(fileSavePath));
+        return ok(new ConversionComplete(convertedContent,fileService.getSourceExtension(filePath),targetEXT,targetFileSave,Objects.nonNull(fileSavePath)));
     }
 
     public Object getHistory(int lastCount) {
