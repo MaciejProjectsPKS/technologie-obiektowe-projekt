@@ -1,11 +1,11 @@
 package com.MJ.converterMaciejJanik.api.services;
 
+import com.MJ.converterMaciejJanik.converter.services.MJConversionService;
 import com.MJ.converterMaciejJanik.db.collections.ConversionInfo;
 import com.MJ.converterMaciejJanik.db.repositiories.ConversionRepo;
 import com.MJ.converterMaciejJanik.models.objects.ConversionComplete;
 import com.MJ.converterMaciejJanik.models.enums.Extension;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
