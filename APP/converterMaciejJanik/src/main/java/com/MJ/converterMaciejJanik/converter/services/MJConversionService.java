@@ -1,4 +1,4 @@
-package com.MJ.converterMaciejJanik.api.services;
+package com.MJ.converterMaciejJanik.converter.services;
 
 
 import org.springframework.stereotype.Service;

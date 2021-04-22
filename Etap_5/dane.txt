@@ -1,0 +1,19 @@
+
+Nowości:
+1. stworzenie diagramów z punktu użytkownika
+2. stworzenia diagramów z punktu sytemuy
+3. wstępna implementacja convertera
+
+
+Dalej:
+1. implementacja konwertera
+
+Kod źródłowy:
+
+Commits: 5
+zmienionych plików: 11
+zmienionych linii: (+200, -2)
+
+
+Pull Request Etapu 5:
+https://github.com/MaciejProjectsPKS/technologie-obiektowe-projekt/pull/3
